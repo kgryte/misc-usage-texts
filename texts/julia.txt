@@ -1,0 +1,6 @@
+
+round(...)
+    round(number[, ndigits]) -> floating point number
+
+    Round a number to a given precision in decimal digits (default 0 digits).
+    This always returns a floating point number.  Precision may be negative.

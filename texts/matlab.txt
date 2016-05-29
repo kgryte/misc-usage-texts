@@ -1,0 +1,60 @@
+MONTECARLOPREDICTION
+  Use Monte Carlo methods to generate a distribution of standard
+  deviation (std) values observed from a binomial process (Bernoulli
+  Trial) with a specified probability of success.
+
+  INPUTS:
+      EDGES: a vector defining the bin edges into which the simulated
+      standard deviations will be histogrammed.
+
+      EVENTS: the number of events (collections of trials) to be
+      sampled from the distribution.
+
+      TRIALS: the number of trials.
+
+      PROBABILITY: the probability of success. For example, a series of
+      coin flips is a collection of events characterized by Bernoulli
+      trials with probability 0.5.
+
+      ITERATIONS: the number of times to repeat each collection of events
+      so as to arrive at an average value for the calculated standard
+      deviations. Default: 500.
+
+
+  OUTPUTS:
+      STDDISTRIBUTION: a probability distribution of the standard
+      deviation with support defined by EDGES. Output is a vector.
+
+  DEPENDENCIES:
+      BINORND.M (STATS toolbox)
+
+  --------------------------
+  EXAMPLE USAGE:
+      MonteCarloPrediction([0:0.0001:1], 5, 100, 0.5);
+
+      MonteCarloPrediction([0:0.0001:1], 5, 100, 0.5, 500);
+
+  --------------------------
+  History:
+      [1] John Doe. University of Foo (2009).
+      [2] Jane Doe. University of Bar (2011).
+
+  Copyright (c) 2011. Jane Doe. University of Bar.
+
+  Version: 1.0 (2011-07-30)
+
+  ----------------------
+  Author Information:
+      Jane Doe
+      Somewhere
+      University of Bar
+      Bar, There
+      e-mail: jane (at) doe
+
+  ---------------------------
+  TODO:
+      [1] Generate a function independent of the STATS toolbox.
+
+  ---------------------------
+  See also BINORND
+
